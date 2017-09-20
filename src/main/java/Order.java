@@ -3,6 +3,7 @@
  */
 import java.util.*;
 public class Order {
+    private Customer customer;
     private Table table;
     private int guests;
     private String appetizer;
@@ -13,17 +14,16 @@ public class Order {
 
 
 
-    public Order(Table table, int guests, String appetizer, String mainCourse, String dessert, String drink, Date time) {
-        if(table.isTaken()){
-            throw new IllegalArgumentException("This table is already booked!");
-        }
-        this.table = table;
-        this.guests = guests;
-        this.appetizer = appetizer;
-        this.mainCourse = mainCourse;
-        this.dessert = dessert;
-        this.drink = drink;
-        this.time = time;
+    public Order(){
+
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public Date getTime() {

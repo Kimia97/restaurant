@@ -8,8 +8,11 @@ public class Table {
     /**
      *
      * @param taken = true if the table is booked
-     * @param tablenr = number of the
+     * @param tablenr = number of the table'
      */
+
+    public Table(){}
+
     public Table(boolean taken, int tablenr) {
         this.taken = taken;
         this.tablenr = tablenr;
