@@ -10,6 +10,10 @@ import java.util.ArrayList;
 @Path("/order/")
 public class OrderService {
     private static ArrayList<Order> orders = new ArrayList<>();
+    private static ArrayList<Customer> customers = new ArrayList<>();
 
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void addCustomer(Customer customer) { customers.add(customer.getCustomerid(), customer);}
 
 }

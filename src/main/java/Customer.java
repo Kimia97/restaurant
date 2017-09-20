@@ -3,7 +3,7 @@
  */
 public class Customer {
     private String name;
-    private String costomerid;
+    private int customerid;
 
     public Customer(){}
 
@@ -15,11 +15,11 @@ public class Customer {
         this.name = name;
     }
 
-    public String getCostomerid() {
-        return costomerid;
+    public int getCustomerid() {
+        return customerid;
     }
 
     public void setCostomerid(String costomerid) {
-        this.costomerid = costomerid;
+        this.customerid = customerid;
     }
 }
