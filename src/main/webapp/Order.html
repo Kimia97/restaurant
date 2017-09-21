@@ -15,11 +15,11 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Restaurant</a>
+            <a class="navbar-brand" href="#">pakke.Restaurant</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="Order.html">Order</a></li>
+            <li><a href="Order.html">pakke.Order</a></li>
             <li><a href="Livepanel.html">Live-panel</a></li>
         </ul>
     </div>
@@ -27,7 +27,7 @@
 <br>
 <br>
 <div class="container">
-    <h1>Order a table</h1>
+    <h1>pakke.Order a table</h1>
     <p>Fill in the fields to order a table.</p>
     <br>
     <div class="input-group1">
@@ -80,25 +80,22 @@
         </div>
     </form>
     <br>
-    <div class="input-group3">
-        <p><strong>Please type in the number of guests:</strong></p>
+    <div class="input-group4">
+        <p><strong>Please type in the number of drinks:</strong></p>
         <input id="amountdrink" type="text" class="form-control" aria-label="Amount drink">
     </div>
     <br>
-    <div class="checkbox">
-        <p>Choose the type of drink:</p>
-        <form>
-            <label class="checkbox-inline">
-                <input id="none" type="checkbox" value="">None
-            </label>
-            <label class="checkbox-inline">
-                <input id="water" type="checkbox" value="">Water
-            </label>
-            <label class="checkbox-inline">
-                <input id="soda" type="checkbox" value="">Soda
-            </label>
-        </form>
-    </div>
+    <form>
+        <div class="form-group4">
+            <label for="appetizer">Select a appetizer (select one):</label>
+            <select class="form-control" id="drink">
+                <option>None</option>
+                <option>Water</option>
+                <option>Soda</option>
+                <option>Beer</option>
+            </select>
+        </div>
+    </form>
     <br>
     <br>
     <button id="order" type="button" class="btn btn-default">Order</button>

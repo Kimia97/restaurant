@@ -1,4 +1,4 @@
-/**
+package pakke; /**
  * Created by Kimia on 14.09.2017.
  */
 import java.util.*;
@@ -19,16 +19,16 @@ public class Order {
 
     }
 
-    public int getCustomerid(){
-        return customerid;
-    }
-
     public int getAmountDrink() {
         return amountDrink;
     }
 
     public void setAmountDrink(int amountDrink) {
         this.amountDrink = amountDrink;
+    }
+
+    public int getCustomerid(){
+        return customerid;
     }
 
     public void setCustomerid(int customerid){

@@ -7,18 +7,22 @@ $(document).ready(function () {
             url: 'rest/order',
             type: 'POST',
             data: JSON.stringify({
-                customerid: $("#customerid").val(),
-                guests: $("#guests").val(),
-                appetizer: $("#appetizer").val(),
-                mainCourse: $("#maincourse").val(),
-                dessert: $("#dessert").val(),
-                amountDrink: $("#amountdrink").val(),
-                drink: $(".checkbox").change(function () {
-                    alert($('#'))
-                })
-
-
-            })
+                    customerid: $("#customerid").val(),
+                    guests: $("#guests").val(),
+                    appetizer: $("#appetizer").val(),
+                    mainCourse: $("#maincourse").val(),
+                    dessert: $("#dessert").val(),
+                    amountDrink: $("#amountdrink").val(),
+                    drink: ""}),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (result) {
+                    alert("You have successfully ordered a table")
+                    console.log(result)
+                },
+                error: function (result) {
+                    console.log(result);
+                }
         })
     })
 });
