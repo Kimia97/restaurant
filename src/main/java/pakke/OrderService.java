@@ -15,5 +15,8 @@ public class OrderService {
     @Consumes(MediaType.APPLICATION_JSON)
     public void addOrder(Order order) { orders.add(order.getCustomerid(),order);}
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public ArrayList<Order> getOrders() { return orders;}
 
 }
