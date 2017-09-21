@@ -3,6 +3,7 @@ package pakke; /**
  */
 import java.util.*;
 public class Order {
+    private String name;
     private int customerid;
     private int tablenr;
     private int guests;
@@ -11,12 +12,20 @@ public class Order {
     private String dessert;
     private String drink;
     private int amountDrink;
-    private Date time;
+    //private Date time;
 
 
 
     public Order(){
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getAmountDrink() {
@@ -35,13 +44,13 @@ public class Order {
         this.customerid = customerid;
     }
 
-    public Date getTime() {
+    /*public Date getTime() {
         return time;
     }
 
     public void setTime(Date time) {
         this.time = time;
-    }
+    }*/
 
     public int getTablenr() {
         return tablenr;

@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <script src="livepanel.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">pakke.Restaurant</a>
+            <a class="navbar-brand" href="#">Restaurant</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
@@ -29,34 +31,17 @@
     <table id="live-panel" class="table table-striped">
         <thead>
         <tr>
+            <th>Name of customer</th>
             <th>Customer Id</th>
-            <th>Table number</th>
             <th>Number of guests</th>
             <th>Appetizer</th>
             <th>Main Course</th>
             <th>Dessert</th>
             <th>Type of drink</th>
             <th>Amount of drink</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-        </tr>
-        <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-        </tr>
-        </tbody>
     </table>
 </div>
+<input id="deleteId" type="text" value="deleteId">
+<button id="delete" type="delete" class="btn btn-danger">Delete order</button>
 </body>
 </html>
