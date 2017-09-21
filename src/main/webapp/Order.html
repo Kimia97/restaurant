@@ -5,9 +5,8 @@
     <title>Order</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="hendelser.js"></script>
 
 </head>
@@ -38,18 +37,18 @@
     <br>
     <div class="input-group2">
         <p><strong>Please type you phone number:</strong></p>
-        <input type="text" class="form-control" aria-label="Phone number">
+        <input id="customerid" type="text" class="form-control" aria-label="Phone number">
     </div>
     <br>
     <div class="input-group3">
         <p><strong>Please type in the number of guests:</strong></p>
-        <input type="text" class="form-control" aria-label="Amount guests">
+        <input id="guests" type="text" class="form-control" aria-label="Amount guests">
     </div>
     <br>
     <form>
         <div class="form-group">
-            <label for="sel1">Select a appetizer (select one):</label>
-            <select class="form-control" id="sel1">
+            <label for="appetizer">Select a appetizer (select one):</label>
+            <select class="form-control" id="appetizer">
                 <option>None</option>
                 <option>Shrimps</option>
                 <option>Meat</option>
@@ -59,8 +58,8 @@
     </form>
     <form>
         <div class="form-group2">
-            <label for="sel2">Select a main course (select one):</label>
-            <select class="form-control" id="sel2">
+            <label for="maincourse">Select a main course (select one):</label>
+            <select class="form-control" id="maincourse">
                 <option>None</option>
                 <option>Beef</option>
                 <option>Salmon</option>
@@ -71,8 +70,8 @@
     <br>
     <form>
         <div class="form-group3">
-            <label for="sel3">Select a dessert (select one):</label>
-            <select class="form-control" id="sel3">
+            <label for="dessert">Select a dessert (select one):</label>
+            <select class="form-control" id="dessert">
                 <option>None</option>
                 <option>Ice cream</option>
                 <option>Chocolate mousse</option>
@@ -81,11 +80,29 @@
         </div>
     </form>
     <br>
+    <div class="input-group3">
+        <p><strong>Please type in the number of guests:</strong></p>
+        <input id="amountdrink" type="text" class="form-control" aria-label="Amount drink">
+    </div>
+    <br>
+    <div class="checkbox">
+        <p>Choose the type of drink:</p>
+        <form>
+            <label class="checkbox-inline">
+                <input id="none" type="checkbox" value="">None
+            </label>
+            <label class="checkbox-inline">
+                <input id="water" type="checkbox" value="">Water
+            </label>
+            <label class="checkbox-inline">
+                <input id="soda" type="checkbox" value="">Soda
+            </label>
+        </form>
+    </div>
+    <br>
+    <br>
     <button id="order" type="button" class="btn btn-default">Order</button>
 </div>
-
-
 </div>
-
 </body>
 </html>

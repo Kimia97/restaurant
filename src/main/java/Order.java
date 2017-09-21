@@ -3,13 +3,14 @@
  */
 import java.util.*;
 public class Order {
-    private Customer customer;
-    private Table table;
+    private int customerid;
+    private int tablenr;
     private int guests;
     private String appetizer;
     private String mainCourse;
     private String dessert;
     private String drink;
+    private int amountDrink;
     private Date time;
 
 
@@ -18,12 +19,20 @@ public class Order {
 
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerid(){
+        return customerid;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public int getAmountDrink() {
+        return amountDrink;
+    }
+
+    public void setAmountDrink(int amountDrink) {
+        this.amountDrink = amountDrink;
+    }
+
+    public void setCustomerid(int customerid){
+        this.customerid = customerid;
     }
 
     public Date getTime() {
@@ -34,12 +43,12 @@ public class Order {
         this.time = time;
     }
 
-    public Table getTable() {
-        return table;
+    public int getTablenr() {
+        return tablenr;
     }
 
-    public void setTable(Table table) {
-        this.table = table;
+    public void setTablenr(int tablenr) {
+        this.tablenr = tablenr;
     }
 
     public int getGuests() {

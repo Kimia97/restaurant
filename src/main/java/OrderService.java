@@ -14,6 +14,7 @@ public class OrderService {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void addCustomer(Customer customer) { customers.add(customer.getCustomerid(), customer);}
+    public void addOrder(Order order) { orders.add(order.getCustomerid(),order);}
+
 
 }
