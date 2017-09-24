@@ -19,6 +19,12 @@ public class OrderService {
     public void addOrder(Order order) {
         int customerid = count.incrementAndGet();
         order.setCustomerid(customerid);
+        String name = order.getName();
+        System.out.println(name);
+        int fromTime = order.getFromTime(); //blir 0
+        int guests = order.getGuests();
+        int toTime = fromTime + (guests*30*100);
+        order.setToTime(toTime);
         orders.add(order);
     }
 

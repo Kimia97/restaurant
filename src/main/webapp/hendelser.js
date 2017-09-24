@@ -9,7 +9,7 @@ $(document).ready(function () {
             type: 'POST',
             data: JSON.stringify({
                     name: $("#name").val(),
-                    //customerid: $("#customerid").val(),
+                    fromTime: $("#fromTime").val(),
                     guests: $("#guests").val(),
                     appetizer: $("#appetizer").val(),
                     mainCourse: $("#maincourse").val(),

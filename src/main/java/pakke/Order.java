@@ -12,7 +12,8 @@ public class Order {
     private String dessert;
     private String drink;
     private int amountDrink;
-    //private Date time;
+    private int fromTime;
+    private int toTime;
 
 
 
@@ -44,13 +45,21 @@ public class Order {
         this.customerid = customerid;
     }
 
-    /*public Date getTime() {
-        return time;
+    public int getFromTime() {
+        return fromTime;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
-    }*/
+    public void setFromTime(int fromTime) {
+        this.fromTime = fromTime;
+    }
+
+    public int getToTime() {
+        return toTime;
+    }
+
+    public void setToTime(int toTime) {
+        this.toTime = toTime;
+    }
 
     public int getTablenr() {
         return tablenr;

@@ -17,6 +17,8 @@ $(document).ready(function () {
             columns: [
                 {data: 'name'},
                 {data: 'customerid'},
+                {data: 'fromTime'},
+                {data: 'toTime'},
                 {data: 'guests'},
                 {data: 'appetizer'},
                 {data: 'mainCourse'},
