@@ -2,9 +2,15 @@ package pakke; /**
  * Created by Kimia on 20.09.2017.
  */
 
+
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -12,19 +18,46 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class OrderService {
     private static ArrayList<Order> orders = new ArrayList<>(4);
     private static final AtomicInteger count = new AtomicInteger(0);
+    private static ArrayList<Table> tables = new ArrayList<>(3);
     //private static ArrayList<Customer> customers = new ArrayList<>();
+    private static Restaurant restaurant = new Restaurant(orders,tables);
 
+    /**
+     * TODO: hvorfor vil ikke fromtime fungere??
+     * @param order
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void addOrder(Order order) {
         int customerid = count.incrementAndGet();
         order.setCustomerid(customerid);
-        String name = order.getName();
-        System.out.println(name);
-        int fromTime = order.getFromTime(); //blir 0
-        int guests = order.getGuests();
-        int toTime = fromTime + (guests*30*100);
-        order.setToTime(toTime);
+
+        String appetizer = order.getAppetizer();
+        String maincourse = order.getMainCourse();
+        String dessert = order.getDessert();
+        int numfood = 0;
+        if(!(appetizer.equals("None"))){
+            numfood++;
+        }
+        if (!(maincourse.equals("None"))){
+            numfood++;
+        }
+        if(!(dessert.equals("None"))){
+            numfood++;
+        }
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss a");
+            Date date2 = formatter.parse(order.getFromTime()+":00 AM");
+            Calendar cal2 = Calendar.getInstance();
+            cal2.setTime(date2);
+            cal2.add(Calendar.MINUTE, numfood*30);
+            SimpleDateFormat printTimeFormat = new SimpleDateFormat("HH:mm a");
+            order.setToTime(printTimeFormat.format(cal2.getTime()));
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
         orders.add(order);
     }
 

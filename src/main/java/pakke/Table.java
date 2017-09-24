@@ -7,11 +7,7 @@ public class Table {
     private boolean taken;
     private int tablenr;
 
-    /**
-     *
-     * @param taken = true if the table is booked
-     * @param tablenr = number of the table'
-     */
+
 
     public Table(){}
 

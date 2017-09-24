@@ -3,6 +3,7 @@
  */
 $(document).ready(function () {
 
+
     $('#order').click(function () {
         $.ajax({
             url: 'rest/order',

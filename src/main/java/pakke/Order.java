@@ -5,16 +5,14 @@ import java.util.*;
 public class Order {
     private String name;
     private int customerid;
-    private int tablenr;
     private int guests;
     private String appetizer;
     private String mainCourse;
     private String dessert;
     private String drink;
     private int amountDrink;
-    private int fromTime;
-    private int toTime;
-
+    private String fromTime;
+    private String toTime;
 
 
     public Order(){
@@ -45,28 +43,20 @@ public class Order {
         this.customerid = customerid;
     }
 
-    public int getFromTime() {
+    public String getFromTime() {
         return fromTime;
     }
 
-    public void setFromTime(int fromTime) {
+    public void setFromTime(String fromTime) {
         this.fromTime = fromTime;
     }
 
-    public int getToTime() {
+    public String getToTime() {
         return toTime;
     }
 
-    public void setToTime(int toTime) {
+    public void setToTime(String toTime) {
         this.toTime = toTime;
-    }
-
-    public int getTablenr() {
-        return tablenr;
-    }
-
-    public void setTablenr(int tablenr) {
-        this.tablenr = tablenr;
     }
 
     public int getGuests() {

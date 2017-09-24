@@ -12,6 +12,11 @@ public class Restaurant {
     public Restaurant(){
     }
 
+    public Restaurant(ArrayList<Order> orders, ArrayList<Table> tables){
+        this.orders = orders;
+        this.tables = tables;
+    }
+
     public int numTakenTables(){
         int number = 0;
         for (int i = 0; i< tables.size(); i++){
