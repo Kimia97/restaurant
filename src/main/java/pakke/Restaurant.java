@@ -17,7 +17,7 @@ public class Restaurant {
         this.tables = tables;
     }
 
-    public int numTakenTables(){
+    /*public int numTakenTables(){
         int number = 0;
         for (int i = 0; i< tables.size(); i++){
             if(tables.get(i).isTaken()){
@@ -25,7 +25,7 @@ public class Restaurant {
             }
         }
         return number;
-    }
+    }*/
 
     public int numTables(){
         return tables.size();

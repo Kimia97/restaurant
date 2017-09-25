@@ -13,10 +13,18 @@ public class Order {
     private int amountDrink;
     private String fromTime;
     private String toTime;
-
+    private int tablenr;
 
     public Order(){
 
+    }
+
+    public int getTablenr() {
+        return tablenr;
+    }
+
+    public void setTablenr(int tablenr) {
+        this.tablenr = tablenr;
     }
 
     public String getName() {

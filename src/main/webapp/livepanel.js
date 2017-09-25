@@ -17,6 +17,7 @@ $(document).ready(function () {
             columns: [
                 {data: 'name'},
                 {data: 'customerid'},
+                {data: 'tablenr'},
                 {data: 'fromTime'},
                 {data: 'toTime'},
                 {data: 'guests'},

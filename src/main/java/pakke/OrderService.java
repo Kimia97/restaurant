@@ -19,19 +19,16 @@ public class OrderService {
     private static ArrayList<Order> orders = new ArrayList<>(4);
     private static final AtomicInteger count = new AtomicInteger(0);
     private static ArrayList<Table> tables = new ArrayList<>(3);
-    //private static ArrayList<Customer> customers = new ArrayList<>();
-    private static Restaurant restaurant = new Restaurant(orders,tables);
 
-    /**
-     * TODO: hvorfor vil ikke fromtime fungere??
-     * @param order
-     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void addOrder(Order order) {
-        int customerid = count.incrementAndGet();
-        order.setCustomerid(customerid);
 
+        int customerid = count.incrementAndGet();
+        int tablenr = count.incrementAndGet();
+        order.setCustomerid(customerid);
+        System.out.println("tablenr: " + tablenr);
+        order.setTablenr(tablenr);
         String appetizer = order.getAppetizer();
         String maincourse = order.getMainCourse();
         String dessert = order.getDessert();
@@ -56,9 +53,14 @@ public class OrderService {
 
         } catch (Exception e){
             e.printStackTrace();
+
+        }
+        for(int i = 0; i<tables.size();i++){
+            if(tables.get(i).checkOrder(order)) {
+                orders.add(order);
+            }
         }
 
-        orders.add(order);
     }
 
     @GET
