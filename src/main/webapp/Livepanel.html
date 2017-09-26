@@ -14,39 +14,41 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Restaurant</a>
+            <a class="navbar-brand" style="color: #ff8913" href="#">Kimias restaurant</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Order.html">Order</a></li>
-            <li class="active"><a href="Livepanel.html">Live-panel</a></li>
+            <li><a style="color: #ff8913" href="index.html">Home</a></li>
+            <li><a style="color: #ff8913" href="Order.html">Order</a></li>
+            <li class="active" style="color: #ff8913"><a style="color: #ff8913" href="Livepanel.html">Live-panel</a></li>
         </ul>
     </div>
 </nav>
 <br>
 <br>
-<h2>Live-Panel</h2>
-<div class="live">
-    <p>All successful orders will appear in this list automatically.</p>
-    <table id="live-panel" class="table table-striped">
-        <thead>
-        <tr>
-            <th>Name of customer</th>
-            <th>Customer Id</th>
-            <th>Table number</th>
-            <th>Reservation from</th>
-            <th>Reservation to</th>
-            <th>Number of guests</th>
-            <th>Appetizer</th>
-            <th>Main Course</th>
-            <th>Dessert</th>
-            <th>Type of drink</th>
-            <th>Amount of drink</th>
-    </table>
-</div>
-<br>
-<p>Type in the id of the customer to delete the order</p>
-<input id="deleteId" type="text" value="deleteId">
+    <div class="container">
+        <h2>Live-Panel</h2>
+            <div class="live">
+                <p>All successful orders will appear in this list automatically.</p>
+            <table id="live-panel" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Name of customer</th>
+                <th>Customer Id</th>
+                <th>Table number</th>
+                <th>Reservation from</th>
+                <th>Reservation to</th>
+                <th>Number of guests</th>
+                <th>Appetizer</th>
+                <th>Main Course</th>
+                <th>Dessert</th>
+                <th>Type of drink</th>
+                <th>Amount of drink</th>
+        </table>
+        </div>
+        <br>
+        <p>Type in the id of the customer to delete the order</p>
+        <input id="deleteId" type="text" value="deleteId">
 <button id="delete" type="delete" class="btn btn-danger">Delete order</button>
+</div>
 </body>
 </html>
