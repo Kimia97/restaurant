@@ -24,7 +24,7 @@ $(document).ready(function () {
                     alert("You have successfully ordered a table!")
                 },
                 error: function (result) {
-                    console.log("No tables available at this time, try again");
+                    alert("No tables available at this time, try again");
                 }
         })
     })

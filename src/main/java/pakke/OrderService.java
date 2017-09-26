@@ -1,8 +1,7 @@
-package pakke; /**
+package pakke;
+/**
  * Created by Kimia on 20.09.2017.
  */
-
-
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -16,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Path("/order/")
 public class OrderService {
-    private static ArrayList<Order> orders = new ArrayList<>(4);
+    private static ArrayList<Order> orders = new ArrayList<>();
     private static final AtomicInteger count = new AtomicInteger(0);
     private static ArrayList<Table> tables = new ArrayList<>(3);
     static {
@@ -31,7 +30,7 @@ public class OrderService {
         int customerid = count.incrementAndGet();
         //System.out.println("tablenr:" + order.getTablenr());
         //int tablenr = count.incrementAndGet();
-        order.setCustomerid(customerid);
+        order.setCustomerid(customerid); //Gir id, autoincrement
 
         String appetizer = order.getAppetizer();
         String maincourse = order.getMainCourse();
@@ -46,6 +45,7 @@ public class OrderService {
         if(!(dessert.equals("None"))){
             numfood++;
         }
+        //Changes the date from a String to Date, adds 30min with every dish ordered. Formats back to String
         try {
             SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss a");
             Date date2 = formatter.parse(order.getFromTime()+":00 AM");
@@ -54,19 +54,24 @@ public class OrderService {
             cal2.add(Calendar.MINUTE, numfood*30);
             SimpleDateFormat printTimeFormat = new SimpleDateFormat("HH:mm:ss a");
             order.setToTime(printTimeFormat.format(cal2.getTime()));
-
         } catch (Exception e){
             e.printStackTrace();
-
         }
 
+        int taken = 0;
+        //Check if there is any tables not ordered within time interval of order
         for(int i = 0; i<tables.size();i++){
             if(tables.get(i).checkOrder(order)) {
                 order.setTablenr(i + 1);
                 tables.get(i).getOrders().add(order);
                 orders.add(order);
                 break;
+            } else {
+                taken++;
             }
+        }
+        if(taken == tables.size()-1){
+            throw new javax.ws.rs.NotFoundException("No tables available, please try another time");
         }
     }
 
