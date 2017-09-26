@@ -38,7 +38,6 @@ public class Table {
                for (int i = 0; i < orders.size(); i++) {
                    Date fromdate1 = formatter.parse(orders.get(i).getFromTime() + ":00 AM");
                    Date todate1 = formatter.parse(orders.get(i).getToTime() + ":00 AM");
-                   System.out.println("Fromdate2: " + fromdate2);
                    if (dateBetween(fromdate1, todate1, fromdate2)) {
                        return false;
                    } else if (dateBetween(fromdate1, todate1, todate2)) {
