@@ -19,16 +19,20 @@ public class OrderService {
     private static ArrayList<Order> orders = new ArrayList<>(4);
     private static final AtomicInteger count = new AtomicInteger(0);
     private static ArrayList<Table> tables = new ArrayList<>(3);
+    static {
+        for(int i = 0; i < 3; i++){
+            tables.add(new Table(i+1, new ArrayList<Order>()));
+        }
+    }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void addOrder(Order order) {
-
         int customerid = count.incrementAndGet();
-        int tablenr = count.incrementAndGet();
+        //System.out.println("tablenr:" + order.getTablenr());
+        //int tablenr = count.incrementAndGet();
         order.setCustomerid(customerid);
-        System.out.println("tablenr: " + tablenr);
-        order.setTablenr(tablenr);
+
         String appetizer = order.getAppetizer();
         String maincourse = order.getMainCourse();
         String dessert = order.getDessert();
@@ -48,20 +52,22 @@ public class OrderService {
             Calendar cal2 = Calendar.getInstance();
             cal2.setTime(date2);
             cal2.add(Calendar.MINUTE, numfood*30);
-            SimpleDateFormat printTimeFormat = new SimpleDateFormat("HH:mm a");
+            SimpleDateFormat printTimeFormat = new SimpleDateFormat("HH:mm:ss a");
             order.setToTime(printTimeFormat.format(cal2.getTime()));
 
         } catch (Exception e){
             e.printStackTrace();
 
         }
-        /*
+
         for(int i = 0; i<tables.size();i++){
             if(tables.get(i).checkOrder(order)) {
+                order.setTablenr(i + 1);
+                tables.get(i).getOrders().add(order);
                 orders.add(order);
+                break;
             }
-        }*/
-        orders.add(order);
+        }
     }
 
     @GET

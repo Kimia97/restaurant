@@ -21,10 +21,10 @@ $(document).ready(function () {
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 success: function (result) {
-                    alert("You have successfully ordered a table")
+                    alert("You have successfully ordered a table!")
                 },
                 error: function (result) {
-                    console.log(result);
+                    console.log("No tables available at this time, try again");
                 }
         })
     })

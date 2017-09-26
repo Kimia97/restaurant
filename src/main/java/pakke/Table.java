@@ -2,6 +2,7 @@ package pakke;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -21,23 +22,34 @@ public class Table {
         this.orders = orders;
     }
 
+    public ArrayList<Order> getOrders(){
+        return orders;
+    }
+
 
    public boolean checkOrder(Order order){
        try{
            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss a");
            Date fromdate2 = formatter.parse(order.getFromTime()+":00 AM");
            Date todate2 = formatter.parse(order.getToTime() +":00 AM");
-           Calendar fromcal2 = Calendar.getInstance();
-           for (int i = 0; i<orders.size(); i++){
-               Date fromdate1 = formatter.parse(orders.get(i).getFromTime()+":00 AM");
-               Date todate1 = formatter.parse(orders.get(i).getToTime()+":00 AM");
-               Calendar fromcal1 = Calendar.getInstance();
-               if(((fromdate2.compareTo(fromdate1) > 0) && ((fromdate2.compareTo(todate1)<0)))
-                       || ((todate2.compareTo(fromdate1)>0)&&(todate2.compareTo(todate1)<0)) ||
-                       ((fromdate1.compareTo(fromdate2)>0) &&((todate1.compareTo(todate2)<0)))){
-                   return false;
-               } else {
-                   return true;
+           if(orders.size()==0){
+               return true;
+           } else {
+               for (int i = 0; i < orders.size(); i++) {
+                   Date fromdate1 = formatter.parse(orders.get(i).getFromTime() + ":00 AM");
+                   Date todate1 = formatter.parse(orders.get(i).getToTime() + ":00 AM");
+                   System.out.println("Fromdate2: " + fromdate2);
+                   if (dateBetween(fromdate1, todate1, fromdate2)) {
+                       return false;
+                   } else if (dateBetween(fromdate1, todate1, todate2)) {
+                       return false;
+                   } else if (fromdate2.compareTo(fromdate1) < 0 && todate2.compareTo(todate1) > 0) {
+                       return false;
+                   }else if((fromdate2.compareTo(fromdate1))== 0 && (todate2.compareTo(todate1)) ==0) {
+                       return false;
+                   } else {
+                       return true;
+                   }
                }
            }
        } catch (Exception e){
@@ -56,5 +68,9 @@ public class Table {
 
     public void setTablenr(int tablenr2) {
         this.tablenr2 = tablenr2;
+    }
+
+    private boolean dateBetween(Date a, Date b, Date c){
+       return a.compareTo(c) * c.compareTo(b) >= 0;
     }
 }
