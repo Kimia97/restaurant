@@ -30,19 +30,21 @@
     <h1>Order a table</h1>
     <p>Fill in the fields to order a table.</p>
     <br>
+    <h2>Order information</h2>
     <div class="input-group1">
         <p><strong>Please type in you full name</strong></p>
         <input id="name" type="text" class="form-control" aria-label="Fullname">
     </div>
     <br>
-    <div class="input-group2">
+    <div class="form group has-feedback">
         <p><strong>From when do you want a table?</strong></p>
-        <input id="fromTime" type="time" step="1800" class="form-control" aria-label="Time">
+        <p>The restaurant is open 24h, but it is only possible to order every whole and half hour</p>
+        <input id="fromTime" type="time" step="1800" class="form-control glyphicon glyphicon-time" aria-label="Time">
     </div>
     <br>
-    <div class="input-group3">
+    <div class="form group has-feedback">
         <p><strong>Please type you phone number:</strong></p>
-        <input id="customerid" type="text" class="form-control" aria-label="Phone number">
+        <input id="customerid" type="text" class="form-control glyphicon glyphicon-earphone" aria-label="Phone number">
     </div>
     <br>
     <div class="input-group4">
@@ -50,6 +52,8 @@
         <input id="guests" type="text" class="form-control" aria-label="Amount guests">
     </div>
     <br>
+    <br>
+    <h2> <span class="glyphicon glyphicon-cutlery"></span> Select menu</h2>
     <form>
         <div class="form-group">
             <label for="appetizer">Select a appetizer (select one):</label>
@@ -102,9 +106,67 @@
     </div>
     <br>
     <br>
-    <button id="order" type="button" class="btn btn-default">Order</button>
     <br>
 </div>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <h3 class="text-center">Payment Details</h3>
+                        <img class="img-responsive cc-img" src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label>CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control" placeholder="Valid Card Number" />
+                                        <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                    <input type="tel" class="form-control" placeholder="MM / YY" />
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label>CV CODE</label>
+                                    <input type="tel" class="form-control" placeholder="CVC" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label>CARD OWNER</label>
+                                    <input type="text" class="form-control" placeholder="Card Owner Names" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button id="order" class="btn btn-warning btn-lg btn-block">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

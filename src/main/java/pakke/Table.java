@@ -21,15 +21,6 @@ public class Table {
         this.orders = orders;
     }
 
-    /*public Date getDate(){
-        try{
-            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss a");
-            Date date2 = formatter.parse(order.getFromTime()+":00 AM");
-            Calendar cal2 = Calendar.getInstance();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }*/
 
    public boolean checkOrder(Order order){
        try{

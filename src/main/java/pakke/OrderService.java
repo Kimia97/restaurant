@@ -55,12 +55,13 @@ public class OrderService {
             e.printStackTrace();
 
         }
+        /*
         for(int i = 0; i<tables.size();i++){
             if(tables.get(i).checkOrder(order)) {
                 orders.add(order);
             }
-        }
-
+        }*/
+        orders.add(order);
     }
 
     @GET
