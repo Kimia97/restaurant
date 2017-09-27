@@ -2,8 +2,6 @@
  * Created by Kimia on 20.09.2017.
  */
 $(document).ready(function () {
-
-
     $('#order').click(function () {
         $.ajax({
             url: 'rest/order',
@@ -24,7 +22,7 @@ $(document).ready(function () {
                     alert("You have successfully ordered a table!")
                 },
                 error: function (result) {
-                    alert("No tables available at this time, try again");
+                    alert("No tables available at this time, please try again");
                 }
         })
     })

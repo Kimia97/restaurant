@@ -1,7 +1,7 @@
 package pakke; /**
  * Created by Kimia on 14.09.2017.
  */
-import java.util.*;
+
 public class Order {
     private String name;
     private int customerid;
@@ -15,9 +15,7 @@ public class Order {
     private String toTime;
     private int tablenr;
 
-    public Order(){
-
-    }
+    public Order(){}
 
     public int getTablenr() {
         return tablenr;
@@ -51,9 +49,7 @@ public class Order {
         this.customerid = customerid;
     }
 
-    public String getFromTime() {
-        return fromTime;
-    }
+    public String getFromTime() {return fromTime;}
 
     public void setFromTime(String fromTime) {
         this.fromTime = fromTime;

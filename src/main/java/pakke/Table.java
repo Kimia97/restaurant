@@ -10,10 +10,8 @@ import java.util.Date;
  * Created by Kimia on 14.09.2017.
  */
 public class Table {
-    //private boolean taken;
     private int tablenr2;
     private ArrayList<Order> orders = new ArrayList<>();
-
 
     public Table(){}
 
@@ -21,13 +19,11 @@ public class Table {
         this.tablenr2 = tablenr2;
         this.orders = orders;
     }
-
     public ArrayList<Order> getOrders(){
         return orders;
     }
 
-
-   public boolean checkOrder(Order order){
+    public boolean checkOrder(Order order){
        try{
            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss a");
            Date fromdate2 = formatter.parse(order.getFromTime()+":00 AM");
@@ -44,7 +40,9 @@ public class Table {
                        return false;
                    } else if (fromdate2.compareTo(fromdate1) < 0 && todate2.compareTo(todate1) > 0) {
                        return false;
-                   }else if((fromdate2.compareTo(fromdate1))== 0 && (todate2.compareTo(todate1)) ==0) {
+                   } else if((fromdate2.compareTo(fromdate1))== 0 && (todate2.compareTo(todate1)) ==0) {
+                       return false;
+                   } else if (fromdate2.compareTo(fromdate1) < 0 && todate2.compareTo(todate1) == 0){
                        return false;
                    } else {
                        return true;
@@ -58,12 +56,9 @@ public class Table {
        return false;
     }
 
-
-
     public int getTablenr() {
         return tablenr2;
     }
-
 
     public void setTablenr(int tablenr2) {
         this.tablenr2 = tablenr2;
