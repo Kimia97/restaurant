@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b70d454-ac72-425d-a7cc-ca67ece96b9e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/order.js" afterPath="$PROJECT_DIR$/src/main/webapp/order.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,17 +72,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Table.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pakke/Table.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+            <state relative-caret-position="374">
+              <caret line="40" column="50" lean-forward="false" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="order.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/order.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="650">
@@ -765,7 +765,7 @@
       <workItem from="1506364393443" duration="8022000" />
       <workItem from="1506419689999" duration="10696000" />
       <workItem from="1506449598869" duration="6888000" />
-      <workItem from="1506496480518" duration="6876000" />
+      <workItem from="1506496480518" duration="7605000" />
     </task>
     <task id="LOCAL-00001" summary="fixed maven problems">
       <created>1505987849045</created>
@@ -858,11 +858,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506502345356</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="finishing touces">
+      <created>1506504126803</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1506504126803</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69739000" />
+    <option name="totallyTimeSpent" value="70468000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1399,14 +1406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pakke/Table.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Order.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4420">
@@ -1445,6 +1444,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
           <caret line="25" column="73" lean-forward="false" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pakke/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="40" column="50" lean-forward="false" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
           <folding />
         </state>
       </provider>
