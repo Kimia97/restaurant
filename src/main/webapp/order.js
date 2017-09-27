@@ -22,7 +22,7 @@ $(document).ready(function () {
                     alert("You have successfully ordered a table!")
                 },
                 error: function (result) {
-                    alert("You are either not filled in enough information, " +
+                    alert("You either need to fill in the time of reservation " +
                         "or there are no tables available at this time. Please try again");
                 }
         })
