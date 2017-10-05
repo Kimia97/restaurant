@@ -17,7 +17,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#" style="color: #ff8913">Kimia's restaurant</a>
+            <a class="navbar-brand" href="#" style="color: #ff8913" style="font-family: Verdana">Kimia's restaurant</a>
         </div>
         <ul class="nav navbar-nav">
             <li><a href="Home.html" style="color: #ff8913">Home</a></li>
@@ -33,36 +33,39 @@
     <div class="row">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
             <div align="center">
-                <h1>Order a table</h1>
-                <p>Fill in the fields to order a table.</p>
+                <h1 style="color: #ff8913" style="font-family: Verdana"> <strong>Order a table</strong></h1>
+                <p>On this page, you can order a table at Kimia's restaurant. You can only order a table for
+                today, but the restaurant is open 24 hours. </p>
+                <br>
+                <p>* indicates fields that must be filled in to successfully order a table.</p>
             </div>
             <br>
             <h2>Order information</h2>
             <br>
 
             <div class="form-group">
-                <p><strong>Please type in you full name</strong></p>
+                <p><strong>Please type in you full name *</strong></p>
                 <input id="name" type="text" class="form-control" aria-label="Fullname">
             </div>
 
             <div class="form-group">
-                <p><strong>From when do you want a table?</strong></p>
+                <p><strong>From when do you want a table? *</strong></p>
                 <p>The restaurant is open 24h, but it is only possible to order every whole and half hour.</p>
                 <input id="fromTime" type="time" step="1800" class="form-control glyphicon glyphicon-time" aria-label="Time">
             </div>
 
             <div class="form group has-feedback">
-                <p><strong>Please type you phone number:</strong></p>
+                <p><strong>Please type you phone number: *</strong></p>
                 <input id="customerid" type="text" class="form-control glyphicon glyphicon-earphone" aria-label="Phone number">
             </div>
 
             <div class="input-group4">
-                <p><strong>Please type in the number of guests:</strong></p>
+                <p><strong>Please type in the number of guests: *</strong></p>
                 <input id="guests" type="text" class="form-control" aria-label="Amount guests">
             </div>
             <br>
 
-            <h2> <span class="glyphicon glyphicon-cutlery"></span> Select menu</h2>
+            <h2> <span class="glyphicon glyphicon-cutlery" style=font-family: Verdana"></span> Select menu</h2>
 
             <form>
                 <div class="form-group">
