@@ -15,7 +15,6 @@ $(document).ready(function () {
                 dataSrc: ''
             },
             columns: [
-                {data: 'name'},
                 {data: 'customerid'},
                 {data: 'tablenr'},
                 {data: 'fromTime'},

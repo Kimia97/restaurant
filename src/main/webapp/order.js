@@ -7,7 +7,6 @@ $(document).ready(function () {
             url: 'rest/order',
             type: 'POST',
             data: JSON.stringify({
-                    name: $("#name").val(),
                     fromTime: $("#fromTime").val(),
                     guests: $("#guests").val(),
                     appetizer: $("#appetizer").val(),
