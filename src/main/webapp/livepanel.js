@@ -31,12 +31,17 @@ $(document).ready(function () {
     }
 
     $("#delete").click(function () {
-        $.ajax({
-            url: 'rest/order/' + $("#deleteId").val(),
-            type: 'DELETE',
-            success: function(result) {
-                $('#live-panel').DataTable().ajax.reload();
-            }
-        });
+        var con = confirm("Are you sure you want to delete an order?");
+        if(con == true){
+                    $.ajax({
+                        url: 'rest/order/' + $("#deleteId").val(),
+                        type: 'DELETE',
+                        success: function(result) {
+                            $('#live-panel').DataTable().ajax.reload();
+                        }
+                    });
+        } else {
+             return false;
+        }
     });
 });
