@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="livepanel.js"></script>
+
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -18,6 +19,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a style="color: #ff8913" href="Home.html">Home</a></li>
+            <li><a href="menu.html" style="color: #ff8913">Menu</a></li>
             <li><a style="color: #ff8913" href="Order.html">Order</a></li>
             <li class="active" style="color: #ff8913"><a style="color: #ff8913" href="Livepanel.html">Live-panel</a></li>
         </ul>
@@ -26,9 +28,10 @@
 <br>
 <br>
     <div class="container">
-        <h2>Live-Panel</h2>
+        <br>
+        <h1 style="color: #ff8913" align="center"> <strong>Live-Panel</strong></h1>
             <div class="live">
-                <p>All successful orders will appear in this list automatically.</p>
+                <p align="center">All successful orders will appear in this list automatically.</p>
             <table id="live-panel" class="table table-bordered table-striped">
             <thead>
             <tr>
@@ -42,14 +45,14 @@
                 <th>Dessert</th>
                 <th>Type of drink</th>
                 <th>Amount of drink</th>
+                <th>Delete order</th>
             </tr>
-            </thead>
         </table>
         </div>
         <br>
         <p>Type in the id of the customer to delete the order</p>
         <input id="deleteId" type="text" value="deleteId">
-<button id="delete" type="delete" class="btn btn-danger">Delete order</button>
+<button id="delete" type="button" class="btn btn-danger">Delete order</button>
 </div>
 </body>
 </html>
