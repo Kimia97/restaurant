@@ -8,8 +8,23 @@ $(document).ready(function () {
     function reloadOrders() {
         $('#live-panel').DataTable().ajax.reload();
     }
+    function deleteOrders(customerid) {
+        console.log("Trykket på knapp");
+        var con = confirm("Are you sure you want to delete an order?");
+        if(con == true){
+            $.ajax({
+                url: 'rest/order/' + customerid,
+                type: 'DELETE',
+                success: function(result) {
+                    $('#live-panel').DataTable().ajax.reload();
+                }
+            });
+        } else {
+            return false;
+        }
+    }
     function getOrders() {
-        $('#live-panel').DataTable({
+        var table = $('#live-panel').DataTable({
             ajax: {
                 url: 'rest/order',
                 dataSrc: ''
@@ -24,23 +39,17 @@ $(document).ready(function () {
                 {data: 'mainCourse'},
                 {data: 'dessert'},
                 {data: 'drink'},
-                {data: 'amountDrink'}
+                {data: 'amountDrink'},
+                {"mRender": function () {
+                    return '<button type="button" class="btn btn-danger">Delete Order</button>';
+                }}
             ]
+        });
+
+        $('#live-panel tbody').on('click', 'button', function () {
+            var customer = table.row($(this).parents('tr')).data();
+            deleteOrders(customer.customerid);
+
         })
     }
-
-    $("#delete").click(function () {
-        var con = confirm("Are you sure you want to delete an order?");
-        if(con == true){
-                    $.ajax({
-                        url: 'rest/order/' + $("#deleteId").val(),
-                        type: 'DELETE',
-                        success: function(result) {
-                            $('#live-panel').DataTable().ajax.reload();
-                        }
-                    });
-        } else {
-             return false;
-        }
-    });
 });
